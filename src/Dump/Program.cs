@@ -14,6 +14,9 @@ public class Output
     */
     public string Dump(object forDisplay)
     {
-        return null;
+        if (forDisplay == null)
+            return "null";
+
+        return forDisplay.ToString();
     }
 }

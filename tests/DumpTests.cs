@@ -17,8 +17,18 @@ namespace Display.Tests
         public void It_should_handle_null()
         {
             var result = sut.Dump(null);
-            result.ShouldNotBeNull();
 
+            result.ShouldBe("null");
+        }
+
+        [Test]
+        public void It_should_return_a_string()
+        {
+            var testValue = Guid.NewGuid().ToString();
+
+            var result = sut.Dump(testValue);
+
+            result.ShouldBe(testValue);
         }
     }
 }
