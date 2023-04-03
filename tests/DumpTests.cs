@@ -60,5 +60,19 @@ namespace Display.Tests
 
             result.ShouldBe(testValue.ToString());
         }
+
+        [Test]
+        public void It_should_print_a_collection_of_strings()
+        {
+            var testValue = new[] { "abc", "def" };
+
+            var result = sut.Dump(testValue);
+
+            // I'll want something a bit better looking in the future, but let's start here
+            var expected = @"| abc |
+| def |";
+
+            result.ShouldBe(expected);
+        }
     }
 }
