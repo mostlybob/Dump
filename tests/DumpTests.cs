@@ -24,11 +24,21 @@ namespace Display.Tests
         [Test]
         public void It_should_return_a_string()
         {
-            var testValue=Guid.NewGuid().ToString();
+            var testValue = Guid.NewGuid().ToString();
 
-            var result=sut.Dump(testValue);
+            var result = sut.Dump(testValue);
 
             result.ShouldBe(testValue);
+        }
+
+        [Test]
+        public void It_should_return_an_integer_string()
+        {
+            int testValue=458135791;
+
+            var result = sut.Dump(testValue);
+
+            result.ShouldBe(testValue.ToString());
         }
     }
 }
