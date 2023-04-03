@@ -50,5 +50,15 @@ namespace Display.Tests
 
             result.ShouldBe(testValue.ToString());
         }
+
+        [Test]
+        public void It_should_handle_date()
+        {
+            DateTime testValue = DateTime.Now;
+
+            var result = sut.Dump(testValue);
+
+            result.ShouldBe(testValue.ToString());
+        }
     }
 }
