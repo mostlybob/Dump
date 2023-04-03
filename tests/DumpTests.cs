@@ -24,9 +24,9 @@ namespace Display.Tests
         [Test]
         public void It_should_return_a_string()
         {
-            var testValue = Guid.NewGuid().ToString();
+            var testValue=Guid.NewGuid().ToString();
 
-            var result = sut.Dump(testValue);
+            var result=sut.Dump(testValue);
 
             result.ShouldBe(testValue);
         }
